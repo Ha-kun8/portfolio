@@ -1,46 +1,46 @@
 // ここを編集すれば、自分用のポートフォリオに差し替えられます。
 const works = [
   {
-    title: "Midnight Broadcast",
-    category: "Motion",
-    year: "2026",
-    description: "高級感のあるブランドキャンペーン向けに制作した、静かな余韻のあるモーション作品です。",
-    image: "assets/images/poster-a.svg"
-  },
-  {
-    title: "Monochrome Study",
-    category: "Graphic",
-    year: "2025",
+    title: "「CYBER SPACE」",
+    category: "Poster",
+    year: "2023",
     description: "文化誌のために構築した、モノクロ基調のアイデンティティと編集レイアウトです。",
     image: "images/IMG_4026.webp"
   },
   {
-    title: "Quiet Horizon",
-    category: "Photography",
+    title: "「The Gathering of Cats」",
+    category: "Graphic",
+    year: "2025",
+    description: "高級感のあるブランドキャンペーン向けに制作した、静かな余韻のあるモーション作品です。",
+    image: "images/IMG_2611.webp"
+  },
+  {
+    title: "「A Single Flower」",
+    category: "Art",
     year: "2025",
     description: "光・質感・時間の流れを意識した、ゆっくりと読まれる写真シリーズです。",
     image: "images/IMG_0803.webp"
   },
   {
-    title: "Spatial Bloom",
-    category: "3DCG",
-    year: "2024",
-    description: "空間に浮かぶ植物のような構造を、3Dで立体的に再構築したインスタレーション案です。",
-    image: "images/IMG_0060.webp"
-  },
-  {
-    title: "Signal Frame",
+    title: "「盗難防止ポスター」",
     category: "Poster",
-    year: "2024",
+    year: "2026",
     description: "タイポグラフィのリズムを重視した、強い印象を残すポスターシステムです。",
     image: "images/81e2a768b7c1420b.webp"
   },
   {
-    title: "Afterimage",
-    category: "Experimental",
-    year: "2023",
+    title: "「The Cats of Kagoshima」",
+    category: "Art",
+    year: "2026",
     description: "モーションと光の残像を通して、Web空間に静かな揺らぎを生み出す実験的作品です。",
     image: "images/IMG_0082.webp"
+  },
+  {
+    title: "「衝動」",
+    category: "Art",
+    year: "2026",
+    description: "空間に浮かぶ植物のような構造を、3Dで立体的に再構築したインスタレーション案です。",
+    image: "images/IMG_0060.webp"
   }
 ];
 
@@ -64,6 +64,10 @@ function renderWorks(filter = "all") {
     card.className = "work-card";
     if (index === 0) {
       card.classList.add("featured");
+    }
+    const isSpecialImage = item.image === "images/IMG_2611.webp";
+    if (isSpecialImage) {
+      card.classList.add("special-image-card");
     }
     card.innerHTML = `
       <div class="work-card-image-wrap">
@@ -91,10 +95,19 @@ function renderWorks(filter = "all") {
 
 function openModal(item) {
   modalBody.innerHTML = `
-    <img src="${item.image}" alt="${item.title}" />
-    <h3>${item.title}</h3>
-    <p>${item.description}</p>
+    <div class="modal-image-wrap">
+      <img src="${item.image}" alt="${item.title}" />
+    </div>
+    <div class="modal-details">
+      <div class="modal-meta">
+        <span>${item.category}</span>
+        <span>${item.year}</span>
+      </div>
+      <h3>${item.title}</h3>
+      <p>${item.description}</p>
+    </div>
   `;
+
   modal.classList.add("is-open");
   modal.setAttribute("aria-hidden", "false");
 }
