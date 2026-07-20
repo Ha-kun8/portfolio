@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Haruki Arizonoは、映像・グラフィック・Webを横断して、静かで記憶に残る体験を制作するクリエイターです。" />
+    <title>Haruki Arizono — Visual Designer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="cursor-glow"></div>
+    <div class="page-edge"></div>
+    <div class="noise"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#hero" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" role="img">
+            <rect x="6" y="6" width="28" height="28" rx="6"></rect>
+            <path d="M13 13H27"></path>
+            <path d="M13 20H27"></path>
+            <path d="M13 27H20"></path>
+          </svg>
+        </span>
+        <span class="brand-text">ARIZONO</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#hero">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#works">PORTFOLIO</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section id="hero" class="hero section">
+        <div class="hero-copy">
+          <div class="hero-name reveal">
+            <span>ARIZONO</span>
+            <span>HARUKI</span>
+          </div>
+          <p class="eyebrow reveal">VISUAL / MOTION / DIGITAL</p>
+          <p class="hero-description reveal">
+            Strong in poster design and graphic design, creating calm yet powerful visual experiences through motion, interface, and atmosphere.
+          </p>
+          <div class="hero-actions reveal">
+            <a class="button" href="#works">VIEW PORTFOLIO</a>
+            <a class="button secondary" href="#about">ABOUT</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" data-speed="0.06" aria-hidden="true">
+          <img class="hero-image" src="images/IMG_7432.webp" alt="Hero visual" />
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About</p>
+          <h2>About</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p>
+              I specialize in poster design and graphic design, shaping work that balances clarity, rhythm, and visual impact.
+            </p>
+            <p>
+              From brand systems to editorial visuals and digital experiences, I create compositions that feel calm, precise, and memorable.
+            </p>
+            <div class="about-meta">
+              <span>東京を拠点に活動</span>
+              <span>制作・コラボレーション対応</span>
+            </div>
+          </div>
+          <div class="about-media reveal" data-speed="0.04">
+            <img src="assets/images/portrait.svg" alt="人物イメージのイラスト" />
+          </div>
+        </div>
+      </section>
+
+      <section id="works" class="section works">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Portfolio</p>
+          <h2>Portfolio</h2>
+        </div>
+
+        <div class="work-filters reveal" aria-label="Portfolio categories">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="Motion">Motion</button>
+          <button class="filter" data-filter="Graphic">Graphic</button>
+          <button class="filter" data-filter="Photography">Photography</button>
+          <button class="filter" data-filter="3DCG">3DCG</button>
+          <button class="filter" data-filter="Poster">Poster</button>
+          <button class="filter" data-filter="Experimental">Experimental</button>
+        </div>
+
+        <div id="work-grid" class="work-grid"></div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Contact</h2>
+        </div>
+        <div class="contact-links reveal">
+          <a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://x.com" target="_blank" rel="noreferrer">X</a>
+          <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="mailto:hello@harukiarizono.com">Mail</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>©2026 Haruki Arizono</p>
+    </footer>
+
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="閉じる">×</button>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
